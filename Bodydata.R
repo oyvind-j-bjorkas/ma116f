@@ -13,6 +13,8 @@
 # 4. SOME PRETTYPRINTING
 # 5. SOME ADDITIONAL GRAPHS
 
+#test
+
 # Installing a useful package: 
 install.packages("skimr")
 Yes
