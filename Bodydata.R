@@ -64,6 +64,11 @@ sapply(df,sd)
 # A very useful function: 
 skim(df)
 
+# maximum and minimum value of AGE: 
+max(df[['AGE']])
+min(df[['AGE']])
+
+
 ### 3. DRAWING TABLES AND GRAPHS
 
 # Simple frequency table
@@ -75,7 +80,7 @@ prop.table(table(df[['AGE']]))
 tab1(df[['AGE']])
 
 #Making a frequency tables with "bins": 
-bins <- seq(0.5,99.5,by=10)
+bins <- seq(0.5,189.5,by=20)
 ages <- cut(df[['AGE']], breaks=bins)
 tab1(ages)
 
@@ -106,3 +111,11 @@ stem(df[['AGE']])
 
 # stripchart provides the "dotplot" chart of figure 2-6. 
 stripchart(df[['AGE']], method='stack')
+
+
+### 6. THE SUBSET FUNCTION
+# To get the subset of bears who are male,
+# we use the condition 
+#     SEX..1.M. == 1: 
+
+df2 = subset(x = df, subset = SEX..1.M. == 1)
